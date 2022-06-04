@@ -1,0 +1,46 @@
+{% extends "clientes/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Escribir aqui codigo para cada pagina -->
+
+<div class="contenedorTabla">
+  <p>
+
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th class="w3-large"style="color:#ffff" scope="row">ID</th>
+          <th class="w3-large"style="color:#ffff" scope="row">RAZON ZOCIAL</th>
+          <th class="w3-large"style="color:#ffff" scope="row">DIRECCION</th>
+          <th class="w3-large"style="color:#ffff" scope="row">CUIT</th>
+          <th class="w3-large"style="color:#ffff" scope="row">EMAIL</th>
+          <th class="w3-large"style="color:#ffff" scope="row">TELEFONO</th>
+          <th class="w3-large"style="color:#ffff" scope="row">FECHA Regis.</th>
+          <th class="w3-large"style="color:#ffff; text-align: center;" scope="row">ACCION</th>
+        </tr>
+      </thead>
+       {% for iten in empresa %}
+          <tr>
+              <th class="w3-large"style="color:aliceblue" scope="row"> {{iten.id}} </th>
+              <td class="w3-large"style="color:aliceblue"> {{iten.razon_social}} </td>
+              <td class="w3-large"style="color:aliceblue"> {{iten.direccion}} </td>
+              <td class="w3-large"style="color:aliceblue"> {{iten.cuit}} </td>
+              <td class="w3-large"style="color:aliceblue"> {{iten.email}} </td>
+              <td class="w3-large"style="color:aliceblue"> {{iten.telefono}} </td>
+              <td class="w3-large"style="color:aliceblue"> {{iten.fecha_registro}} </td>
+              <td class="float-none">
+                  <button type="button" class="btn btn-primary badge-pill"style="color:#ffff">EDITAR</buttontype></button>
+                  <button type="button" class="btn btn-danger badge-pill"style="color:#ffff">BORRAR</buttontype></button>
+              </td>
+          </tr>
+       {% endfor %}
+     </table>
+    
+  </p>
+</div>
+
+
+{% endblock %}

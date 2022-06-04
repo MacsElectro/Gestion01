@@ -1,7 +1,12 @@
+from turtle import home
 from clientes.views import *
 from django.urls import path 
 
 urlpatterns = [
-    #path("hola-mundo/", index, name="hola-mundo" ),
-    path("registro/", registro_empresa, name="registro_empresa"),
+    path("", home, name="Home" ),
+    path("registro/", registro, name="Registro"),
+    path("clientes/", clientes, name="Clientes"),
+    path("presupuestos/", presupuestos, name="Presupuestos"),
+    path("contacto/", contacto, name="Contacto"),
+
 ]
