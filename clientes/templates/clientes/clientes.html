@@ -32,8 +32,8 @@
               <td class="w3-large"style="color:aliceblue"> {{iten.telefono}} </td>
               <td class="w3-large"style="color:aliceblue"> {{iten.fecha_registro}} </td>
               <td class="float-none">
-                  <button type="button" class="btn btn-primary badge-pill"style="color:#ffff">EDITAR</buttontype></button>
-                  <button type="button" class="btn btn-danger badge-pill"style="color:#ffff">BORRAR</buttontype></button>
+                  <a class="btn btn-primary badge-pill" style="color:#ffff" href="{% url 'Edit_emp' iten.id %}">EDITAR</a>
+                  <a class="btn btn-danger badge-pill"style="color:#ffff" href="{% url 'Eliminar_emp' iten.id %}">BORRAR</a>
               </td>
           </tr>
        {% endfor %}

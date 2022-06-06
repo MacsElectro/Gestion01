@@ -14,19 +14,22 @@
         {% csrf_token %}
         <table style="color:white; margin: 20px auto;">{{formu_reg}}</table>
         <input type="submit" value="Guardar" style="width: 150px;">
-
+    
         {% if formu_reg.errors %}
-            {% for field in formu_reg %}
+             {% for field in formu_reg %}
                 {% for error in field.errors %} 
                     <div class="alert alert-danger">
                         <strong>{{ error|escape }}</strong>
-                    </div>
+                   </div>
                 {% endfor %}
-            {% endfor %}
+             {% endfor %}
         {% endif %}
+
     </form>
+    <p><h1 style="color:white; text-align:center;">{{ mensaje }}</h1></p>
   </p>
 </div>
 
 
 {% endblock %}
+
